@@ -5,7 +5,7 @@ var jsfOAuth = require("./lib/jsfOAuth"),
 	localStorage = new LocalStorage('/Users/matt/.rtstatforce'),
 	weatherman = require( 'weatherman.io' ),
 	jsforce = require("jsforce"),
-    stat = require('rtstat');
+    stat = require('rtstat'),
 
 // If our various api keys aren't set, we need to prompt the user to enter them. Bring up a "clientSetup". Due to asynchronous
 // nature of node, we return after the call so we don't go on. THis means that the script stops after the user enters
@@ -25,7 +25,7 @@ if (localStorage.getItem('accessToken')==null || localStorage.getItem('refreshTo
 var setupPromises=[];
 
 // Find our local thermostats
-var tstats=tstat.findThermostats();
+var tstats=stat.findThermostats();
 setupPromises.push(tstats);
 
 // Let's get the current weather
@@ -110,7 +110,6 @@ function saveThermoData(data, weatherData) {
 // And POST to our Apex REST endpoint
 	conn.apex.post("/Thermostat/", postData, function(err, res) {
 	  if (err) { return console.error(err); }
-	  console.log("response: ", res);
 	});
 
 }

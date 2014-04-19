@@ -1,7 +1,7 @@
 var jsfOAuth = require("./lib/jsfOAuth"),
 	clientSetup = require("./lib/clientSetup"),
 	Q = require("q"),
-	ocalStorage = require('node-localstorage').LocalStorage,
+	LocalStorage = require('node-localstorage').LocalStorage,
 	localStorage = new LocalStorage('/Users/matt/.rtstatforce'),
 	weatherman = require( 'weatherman.io' ),
 	jsforce = require("jsforce"),

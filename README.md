@@ -4,7 +4,7 @@ First, clone this repository, then
 
 `cd rtstatforce`
 then
-`node install`
+`npm install`
 to install all the dependencies.
 
 ## Usage

@@ -1,0 +1,13 @@
+{
+	"name": "rtstatforce",
+	"version": "0.0.1",
+	"dependencies": {
+		"jsforce": "1.1.2",
+		"q":"1.0.1",
+		"node-localstorage":"0.3.4",
+		"weatherman.io":"0.1.5",
+		"rtstat":"0.0.2",
+		"prompt":"0.2.12",
+		"open":"0.0.5"
+	}
+}

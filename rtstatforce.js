@@ -5,7 +5,7 @@ var jsfOAuth = require("./lib/jsfOAuth"),
 	localStorage = new LocalStorage('/Users/matt/.rtstatforce'),
 	weatherman = require( 'weatherman.io' ),
 	jsforce = require("jsforce"),
-    stat = require('rtstat'),
+    stat = require('rtstat');
 
 // If our various api keys aren't set, we need to prompt the user to enter them. Bring up a "clientSetup". Due to asynchronous
 // nature of node, we return after the call so we don't go on. THis means that the script stops after the user enters
